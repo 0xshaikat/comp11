@@ -1,0 +1,8 @@
+board:
+Reading: none
+next: ch11
+
+Outline:
+1. about CS
+2. problem solving
+3. comp11 syllabus
