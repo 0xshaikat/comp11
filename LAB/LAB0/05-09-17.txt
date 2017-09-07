@@ -1,0 +1,111 @@
+//notes for lab 0
+
+STEP 3
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+commands---
+who
+-shows whoevers on the comp
+hostname
+-server 
+whoami 
+-who's using the pc
+date 
+-date
+uptime
+-how long/how many users have been using the current server
+cal
+-cal with current day highlighted
+cal 2017
+-calendar for the entire year
+cal 5 2017
+- calendar for a certain month (numbered in the middle of the command)
+cal 5 16
+-calendar for a certain month and year (may, '16)
+man cal 
+///I was born on a thursday
+-manual page for the calendar
+man -k calendar
+-commands that can specifically be used for the calendar ( a manual page)
+man -k fun
+-a lot more functions
+exit
+-exit another server
+provide
+- command developed at Tufts (not a UNIX command) to turn in code
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+STEP 4
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ssh'ing into tufts homework server
+//what does the -X do?
+$ssh -X sislam06@homework.cs.tufts.edu
+-using hostname for the terminal logs us onto the homework server for the terminal; different from before
+-to exit, the command is exit
+
+http://bit.ly/2iWQyP6 --detailed directions to login to the Halligan server
+
+moving up and down the directory
+$cd ..  -- move up a directory
+$mv mydir newdir --rename mydir to newdir
+$cd ~ -- go home
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+STEP 5
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//writing c++ programs
+1 edit
+2 save
+3 compile
+4 run
+5 test
+6 debug, improve
+7 return to step 1
+//comp11 motto - write a little, compile a little
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+STEP 6
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+- nano or touch to make a new file
+- nano/touch hello.cpp & (open with nano without the '&' and to save, use C-o)
+
+// Shaikat Islam
+// COMP11
+// Lab 0
+// September 5, 2017
+
+#include <iostream?
+
+//helloworld
+int main(){
+  std::cout << "Hello, World!";
+  return 0;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+STEP 7
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//compiling
+
+$clang++ -Wall -Wextra hello.cpp
+
+//generates executable a.out
+//run new command by typing ./a.out
+
+//"std::" can be removed by adding "using namespace std;" below the "include <iostream>" line
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+STEP 8 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//handing it in
+$provide comp11 lab0 hello.cpp
+//adds it to the comp11 directory
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
