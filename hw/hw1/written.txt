@@ -1,0 +1,186 @@
+/********************
+* COMP11
+* Homework 1
+* Written Component
+* Shaikat Islam
+*********************/
+
+Written #1:
+
+1a. For the num_students variable, I would use the int data type as the number
+of students would be a whole integer number; I wouldn't use the short data type
+even if it is an integer type because the number of students at a large research
+university may be larger than 32,767.
+1b. For the avg_exam_grade variable, I would use the double data type to adjust
+for a good degree of precision in its digits, as well as to account for the
+decimal component in the avg_exam_grade var.
+1c. For the first_name variable, I would use the string class; memory should not
+be much of a problem as it is dynamically allocated.
+
+Written #2:
+
+2a. int current_inning;
+2b. current_inning = 6;
+2c. const double EARNED_RUN = 2.38
+
+Written #3:
+
+GIVEN THAT:
+- a STANDARD PBJ SANDWICH IS composed of
+  - 30 mL peanut butter
+  - 30 mL grape jelly
+  - 2 (1.25cm x 10cm x 10cm) bread slices
+- 'ingredients/utensils' are defined as:
+  - one butterknife (Yangjiang Market Value Enterprise Company Limited branded,
+   if possible)
+  - Justin's TM All Natural Peanut Butter ( 453.592 g )
+  - Welch's Jelly Concord Grape ( 510.291 g )
+  - one loaf of 1.25cm x 10cm x 10cm bread slices (whole wheat, if possible)
+  - one ceramic plate, (Dewick or Carmichael)
+
+- the robot is capable of discerning the difference between the ingredients
+through the use of an edge detection system/camera in combination with
+limited artificial intelligence (to navigate its surrounding, and order
+ingredients through amazon pantry, or have them acquired by a human)
+
+- the robot possesses articulate movement, similar to a human's ability to grasp
+and delicately spread ingredients
+
+1. calibrate position of robot so that robot is 14cm away from the table, with
+   its 'hands' positioned 10cm above the table surface;
+2. initialize check for ingredients/utensils necessary for a STANDARD PBJ
+    on the table;
+2. if (ingredients/utensils not present)
+       acquire ingredients through amazon pantry;
+       repeat step 2;
+   else
+       go to step 3;
+3. initiate protocol to check for the openness of the jars of peanut butter and
+   jelly, as well as if the bread packaging is open;
+4. if (all ingredients opened)
+      go to step 5;
+  else
+      open ingredients (through assistance of the robot's articulate 'hands',
+      edge detection system, and artificial intelligence);
+      go to step 5;
+5. acquire two bread slices;
+6. place each bread slice 2 cm away from each other on the ceramic plate;
+7. grasp butterknife;
+8. position butterknife in Justin's TM All Natural Peanut Butter Jar;
+9. using volume measuring protocol, place 30mL of peanut butter on butterknife;
+10. spread 30ml of peanut butter on one piece of bread;
+11. place piece of bread on plate;
+12. clean butterknife of all peanut butter residue;
+13. position butterknife in Welch's Grape Jelly;
+14. spread 30ml of grape jelly on piece of bread without any condiments on it
+    (as detected by the computer's camera/AI system)
+15. place piece of bread on plate, 2cm from the other one;
+16. clean butterknife of all jelly residue;
+17. place butterknife on table;
+18. grasp the two pieces of bread, condiment side up, on both 'hands';
+19. position the two pieces of bread together, using .5N of force;
+20. place this 'sandwich' on plate;
+21. profit???
+
+Written #4:
+Psuedocode for Programming Problem #3:
+
+Variables:
+
+Point system.
+- int points; (stores total number of points)
+
+Choice system.
+- char choice;
+
+Constant integers for adding point values.
+- const int plus_one = 1;
+- const int plus_two = 2;
+- const int plus_three = 3;
+
+User input.
+- string user_query = "What's yo name?";
+- string name; (for username)
+
+This is for the beginning of the game, once the user has entered the labyrinth.
+- string welcome_one = "Bienvenidos. Welcome. Wilkommen. This is the labyrinth,
+  You have entered it. By it, I mean "labyrinth". Your name is ";
+- string welcome_two = " That is good. Please enjoy your visit."
+- string welcome_three = "Your cousin's niece's uncle's dad Luke is sobbing."
+
+
+These are for all the questions.
+- string q_one = "Oh no! Or, oh yes. A Young Thugger Girl has taken Luke. Do you
+  rap battle to gain the THUGGER POWER???";
+- string q_two = "You've gained the THUGGER POWER! But you only have 3 hours to
+  find Luke, which can only be done with SOSA.\nSosa is waiting for you. Do you
+  stalk Sosa to get back Luke?";
+- string q_three = "UH...Do you NOT sacrifice the features to save Luke?";
+
+These are all the responses for each question, based on user input.
+- string y_q_one = "What a brave soul. The power of thugger is now second nature
+  to you.";
+- string n_q_one = "Wrong answer. You die. Luke dies. Everyone...just dies!";
+- string y_q_two = "Good job! Sosa is appreciative and gives you forty new
+  features on his latest album. You can sacrifice the features to save Luke." ;
+- string n_q_two = "Sosa doesn't trust you. Sosa removes you from the lair and
+  transports you to Medford/Sommerville." ;
+- string y_q_three = "AYYY! You good. NO ONE likes Luke. You are now. A. Rapper!
+  Go win some grammys. Maybe save your hometown from overzealous yuppies.";
+- string n_q_three = "Was Luke really worth it? You lost all your power to save
+  some random dude. Gosh. Talk about choices." ;
+
+These are all the outcomes (three of them, based on final point value).
+- string outcome_one = "You're wack. Go home and listen to some LOGIC.";
+- string outcome_two = "Ayy. You're mediocre. UH...You like JCole?" ;
+- string outcome_three = "You're perffffff. Good stuff. Keep on keepin' on." ;
+
+PSEUDOCODE for Labyrinth:
+
+- print user_query;
+- print welcome_one + name + welcome_two + welcome_three;
+- print q_one;
+- input choice;
+- if the choice is 'Y':
+     - add plus_one to points;
+     - print y_q_one;
+     - print q_two;
+     - input choice;
+ - else:
+     - print n_q_one;
+     - print points;
+     - print outcome_one
+     - exit;
+     - if the choice to question two is yes:
+        - add plus_two to points;
+        - print y_q_two;
+        - print q_three;
+        - input choice;
+     - else:
+        - print n_q_two;
+        - print points;
+        - if points are from 1 to 4:
+           - print outcome_one;
+        - else:
+             - print outcome_two;
+             - exit;
+        - if the choice to question three is yes:
+           - print y_q_three;
+           - points += plus_three;
+           - print points;
+           - print outcome_three;
+        - else:
+           - print n_q_three;
+           - print points;
+           - if points are from 1 to 4:
+              - print outcome_one;
+           - else:
+              - print outcome_two;
+           - exit;
+
+Written #5:
+One of the errors I got was a compiler error named the 'not-found error' that
+was not able to find 'cin' and 'cout', which were not defined. Then I realized
+that I hadn't declared 'namespace std', so the compiler was unable to find
+'cin' and 'cout' from the std namespace. I also got a warning for an unused
+expression, which I fixed by using the variable/expression in question.

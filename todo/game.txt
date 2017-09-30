@@ -1,0 +1,54 @@
+can:
+draw one card
+shuffle card
+check cards value
+
+conditions:
+boolean deck_empty;
+boolean is_face;
+boolean is_even;
+boolean is ace_of_spades;
+
+constraints:
+2 or more players
+win by points
+
+PSUEDOCODE FOR A_GAME_OF_PRIMES:
+
+//declaration of vars
+boolean deck_empty;
+boolean is_face;
+boolean is_even;
+boolean is ace_of_spades;
+
+int player1;
+int player2;
+char continue;
+char endgame;
+do{
+        do {
+        shuffle cards;
+        draw one card;
+        add value of card to player 1;
+        cout << "do you want to keep drawing?\n Y or N.";
+        cin >> continue;
+        }
+        while( continue == 'Y');
+        //player 2
+        do {
+        shuffle cards;
+        draw one card;
+        add value of card to player 1;
+        cout << "do you want to keep drawing?\n Y or N.";
+        cin >> continue;
+        }
+        while( continue == 'Y');
+}
+cout << "continue game?\n (Y or N);
+cin >> endgame;
+}
+while (endgame == 'Y' && !(deck_empty));
+
+//then
+check if ints are primes
+if not, the one closest to the any prime wins

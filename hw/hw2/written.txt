@@ -1,0 +1,146 @@
+/********************
+* COMP11
+* Homework 2
+* Written #2
+* Shaikat Islam
+*********************/
+
+//Written #1
+The command that would be used to list all the files in my hw2 directory
+as well as the date of modification (newest at the bottom), with timestamps,
+would be 'll -tr'.
+
+//Written #2
+The loop that I would use if I wanted the user to enter a 'Y' or 'N'
+would be loop a.
+
+//Written #3: TB p. 92, Ex. 28-31
+28. The output produced by the following while loop would be:
+>   10
+     7
+     4
+     1
+
+29. If the operator in the last exercise was changed to a less than sign,
+there would be no output because the integer x=10 would fail the boolean
+expression in the while loop.
+
+30. The output produced by this do-while loop would be the same as 28:
+>   10
+     7
+     4
+     1
+
+31. The output produced by this do-while loop would be:
+>   -42
+
+Afterwards, the while loop's boolean expression would not read a 'true' value
+for the integer x, and none of the operations in the body would be performed.
+
+//Written #4
+4A. The value of y after the code snippet is executed is y = 2.
+4B. //add a break
+    int y = 3, x =3;
+    switch ( x + 3)
+    {
+        case 6:
+        y = 1;
+        break;
+        default:
+        y+=1;
+    }
+
+4C. //re-writing code snippet
+    if ( (x+3) == 6){
+       y = 1;
+    }
+    else{
+    y += 1;
+    }
+
+//Written #5
+5A. Output:
+>1 0
+
+5B. Output:
+>0 1 2 3
+
+5C. Output:
+>4 5 6 7 8 . . . .
+This is an infinite loop.
+
+5D. Output:
+>5
+
+5E. Output:
+>5
+
+//Written #6
+Pseudocode for Problem 3:
+================================================================================
+//function to check if a value exists in an array
+bool exist (string array, char)
+     -for i = 0, i less than length of list, i++:
+          -change a[i] to a non-color char
+          -return true if value exists
+          -break
+     -return false
+
+//main function
+-int main()
+    ///////////////////////////////VARIABLES////////////////////////////////
+    //user's guesses
+    - char g_1, g_2, g_3, g_4;
+    //an array of the users guesses
+    - char user_guesses[4];
+    //the actual colors
+    - char colors[] = {'r', 'o', 'y', 'g', 'b', 'v'};
+    //solution array
+    - char solution[4];
+    //copy of solution array
+    - char solution_copy[4];
+    //answer to yes/no choice to continue game
+    - char choice = 'Y';
+
+    //num black/white_pegs
+    - int b_peg = 0, w_peg = 0;
+    //pseudo-random num generation based on the current time
+    - srand(time (0));
+    //the random num
+    - int ran;
+    ///////////////////////////////////////////////STRINGS//////////////////////
+    - string enter_guess = "Enter your guesses!\n";
+    - string invalid = "Invalid choice; try again!\n";
+    - string peg_one = "Peg one? Enter r, o, y, g, b, or v.\n";
+    - string peg_two = "Peg two? Enter r, o, y, g, b, or v.\n";
+    - string peg_three = "Peg three? Enter r, o, y, g, b, or v.\n";
+    - string peg_four = "Peg four? Enter r, o, y, g, b, or v.\n";
+    - string result_a = "Result: ";
+    - string result_b = " black pegs and ";
+    - string result_c = " white pegs\n";
+    ////////////////////////////////////////////GAME////////////////////////////
+    //populate solution array with the randomly generated colors with a for loop
+    //so long as choice is equal to 'Y'
+    - while (choice == 'Y'):
+      - ask user to enter guess
+      - cin g_1
+      - validate user input using a do-while loop
+      - enter guess variables into char user_guesses[] array
+      - repeat above four steps three times for the rest of the guesses
+      - for black pegs, using a for loop, check if the solution array matches
+        with the user guess array
+      - for white pegs, using a for loop defined in the function 'exist', check
+        if a value exists in the solution_copy array, and change element to
+        noncolor variable to prevent duplicates
+      - if black peg > 4:
+           - cout congrats
+           - choice = 'N'
+           - return 0
+      - else:
+           - cout result of white peg and black peg
+           - cout "do you want to continue"
+           - cin >> choice
+           - do while loop to validate user input for their choice to continue
+   - outside of while loop, share the answer
+   - return 0
+================================================================================
