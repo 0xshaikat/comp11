@@ -1,0 +1,69 @@
+/********************
+* COMP11
+* Homework 3
+* Problem 1
+* Shaikat Islam
+*********************/
+
+//Written #1:
+> ping -c4 homework.cs.tufts.edu | awk '/---/,0'
+//OUTPUTS
+>--- homework.cs.tufts.edu ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 4.827/5.131/5.446/0.272 ms
+
+//Written #2:
+>0 20 40 60 80
+
+//Written #3a:
+//where a and b are integer params
+foo(a,b);
+
+//Written #3b:
+string s = bar();
+
+//Written #4:
+The name of the function is pow(), which stands for raise to the power. There
+are two parameters of type double, and the return type of the function is a
+double.
+
+The include statement required for this function is '#include <math.h>'.
+To call this function to determine 13^2, use the following code:
+double result = pow(13, 2);
+
+//Written #5:
+PSEUDOCODE FOR PROGRAMMING #2:
+constants:
+// Number of points needed to win
+const int THRESHOLD = 20;
+// Players
+const int P_ONE = 1;
+const int P_TWO= 2;
+//bank or hold
+const int BANK = 0;
+const int HOLD = 1;
+// Total number of points for each player.
+int pone_points = 0, ptwo_points = 0;
+// Whose turn it is. Player One always starts.
+int turn = P_ONE;
+// Is the game over yet
+bool game_over = false;
+//the dice
+int current = random roll of the dice from 1 to 6 exclusive
+
+-first while loop runs so long as game_over is false
+-next while loop runs so long as the boolean round_over is false
+-ask user if they want to bank or hold
+-next while loop runs so long as user continues to decide to bank
+-if the dice rolls a 1, end round, add 0 to player one pone_points,
+call switch_turn(), call check_for_win(), set game_over to true if a player has
+won, call announce_points()
+-if its not a 1, add result to round_points,
+ask the user if they want to bank or hold
+-if they bank, repeat above 3 steps
+-if they hold, add round_points to respective player's score,
+call check_for_win() and set game_over to true if a player has won,
+call announce_points(), call switch_turn() if no one has won
+-repeat above 7 steps so long as threshold is not reached and
+game_over is false
+-outside of while loop, game is over and print "thanks for playing"

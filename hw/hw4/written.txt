@@ -1,0 +1,90 @@
+/********************
+* COMP11
+* Homework 4
+* Written
+* Shaikat Islam
+*********************
+
+//Written #1
+> chmod u=rx awesome.cpp
+
+//Written #2
+2A:
+void foo (int &a, int b);
+
+2B:
+string bar();
+
+2C:
+int a,b;
+foo(a,b);
+
+2D:
+string s = bar();
+
+//Written #3
+3A:
+> 5 6
+  6 6
+  6 7
+
+3B:
+> 5 6
+  8 5
+  7 10
+
+//Written #4
+PSEUDOCODE FOR BUFFY.CPP:
+Functions:
+
+Name: valid
+Purpose: validate integer inputs.
+Parameters: none
+Returns: int
+
+Name: end_game
+Purpose: return a bool based on if the simulation has ended
+Parameters: (int &stakes, int &vamps, bool &buffy_alive);
+Returns: bool
+
+Name: stake
+Purpose: Stake a vampire.
+Parameters: (int attacker, int &num_stakes, int &vamps, bool &buffy_alive);
+Returns: void
+
+Name: spell
+Purpose: Cast a spell.
+Parameters: (int attacker, int &num_stakes, int &vamps, bool &buffy_alive);
+Returns: void
+
+Name: choice
+Purpose: Makes the choice.
+Parameters: (int attack, int attacker, int &num_stakes,int &vamps, bool
+&buffy_alive)
+Returns: void
+
+Name: print_result
+Purpose: Prints result of encounter.
+Parameters: (&vamps, &num_stakes, &buffy_alive)
+Returns: void
+
+Name: main
+Purpose: Run a simulation of Buffy out on patrol with the Scooby gang,
+Willow, and Xander.
+Parameters: std input
+Returns: 0, std output
+
+When to call the function:
+- in main, use a while loop with the function call of end_game
+- in while loop, call encounter
+- in encounter call valid() twice to get input for users choice to attack and
+who to use to attack (Buffy, Willow, and Xander)
+- in same while loop, call choice
+- in choice, call stake if attack is 0
+- in stake, call srand(time(NULL))
+- in choice, call spell if attack is 1
+- in spell, call srand(time(NULL))
+- in choice, call run if attack is anything else
+- in run, call rand()
+- in same while loop, call print_result
+- end while loop

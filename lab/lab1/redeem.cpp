@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-// The line below allows us to use cout and cin for input and output
+// The line below allows us to use cout and cin for input and output 
 // instead of std::cout and std::cin
 using namespace std;
 
@@ -26,14 +26,14 @@ int main()
   string name = "";
   int tickets_won;
 
-  //code snippet to ensure two decimal places for outputted price
+  //code snippet to ensure two decimal places for outputted price 
   //(for extra credit 2 )
   cout.setf(ios::fixed);
   cout.setf(ios::showpoint);
   cout.precision(2);
 
   cout << "Welcome to The Arcade!" << endl;
-
+  
   //part 1
   cout << "What's your name, ticket-winner?" << endl;
 
@@ -41,10 +41,10 @@ int main()
   //use GETLINE to read entire line of input from user w/ whitespace
   getline(cin, name);
 
-  cout << "How many tickets did you win, "
+  cout << "How many tickets did you win, " 
        << name << "?" << endl;
-  cin >> tickets_won;
-  cout << "Woah, " << name << "! You have won "
+  cin >> tickets_won; 
+  cout << "Woah, " << name << "! You have won " 
   //part 2 addition
        << ((tickets_won / MINION) + (tickets_won % MINION))
        << " prizes:"  << endl;
@@ -52,8 +52,8 @@ int main()
   cout << tickets_won % MINION << " spider rings" << endl;
 
   //extra credit 1
-  cout << "LMAO u w4st3d $" << (tickets_won * PRICE)
+  cout << "LMAO u w4st3d $" << (tickets_won * PRICE) 
        << " on this dumb game" << endl;
-
+  
   return 0;
 }

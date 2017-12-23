@@ -1,0 +1,63 @@
+// {Your Name}
+// COMP11
+// Lab 2
+// September 19, 2017
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+  string below_deck = "Below Deck";
+  string american_horror = "American Horror Story";
+  string the_challenge = "MTV's: The Challenge";
+
+  string show1;
+  string show2;
+  string show3;
+
+  int hours_of_sleep;
+  cout << "How many hours of sleep did you get?" << endl;
+  cin >> hours_of_sleep;
+
+  if (hours_of_sleep < 6) {
+    show1 = below_deck;
+
+    char been_to_gym;
+    cout << "Have you been to the gym (y/n)?" << endl
+    cin >> been_to_gym;
+
+    if (been_to_gym = 'y')
+    {
+      show2 = the_challenge;
+      show3 = american_horror;
+    } else {
+      show2 = american_horror;
+      show3 = the_challenge;
+    }
+  } else 
+    show1 = american_horror;
+
+    int pocketChange;
+    cout << "How much change is in your pocket?" << endl;
+    cin << pocketChange;
+
+    if(pocketChange > .5)
+    {
+      show2 = the_challenge;
+      show3 = below_deck;
+    } else {
+      
+      show2 = below_deck;
+      show3 = the_challenge;
+    }
+  }
+
+  cout << "You should watch your shows in the following order:" << endl;
+  cout << "1.) " << show1 << endl;
+  cout << "2.) " << show3 << endl;
+  cout << "3.) " << show3 << endl;
+
+  return 0;
+}

@@ -1,0 +1,23 @@
+// {Your Name}
+// COMP 11
+// Lab 1
+// September 12, 2017
+
+#include <iostream>
+#include <string>
+
+// The line below allows us to use cout and cin for input and output 
+// instead of std::cout and std::cin
+using namespace std;
+
+int main()
+{
+  const int MINION = 3;
+  const int SPIDER = 1;
+
+  cout << "Welcome to The Arcade!" << endl;
+  
+  // Your code goes here
+  
+  return 0;
+}

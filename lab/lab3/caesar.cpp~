@@ -1,0 +1,27 @@
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+  string message;
+  int shift;
+
+  // Here is some sample code showing how to access each character of 
+  // a string:
+  message = "itslit";
+  cout << message[0];
+  cout << message[1];
+  cout << message[2] << endl;
+  cout << message[3];
+  cout << message[4];
+  cout << message[5] << endl;
+  // ^ Delete before you submit
+
+  // Get your loop on!
+
+
+  return 0;
+}
